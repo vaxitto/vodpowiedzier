@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ustawienia solvera</title>
+    <link rel="stylesheet" href="fonts/inter.css" />
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <main class="settings-root">
+      <header>
+        <h1>Ustawienia</h1>
+        <p>Zarządzaj połączeniem z ChatGPT oraz wyglądem panelu.</p>
+      </header>
+      <form id="settings-form">
+        <section>
+          <h2>Połączenie</h2>
+          <label>
+            Klucz API
+            <input type="password" name="apiKey" autocomplete="off" placeholder="wprowadź swój klucz" required />
+          </label>
+          <label>
+            Model
+            <select name="model">
+              <option value="gpt-4o-mini">gpt-4o-mini (domyślny)</option>
+              <option value="gpt-4o">gpt-4o</option>
+              <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+            </select>
+          </label>
+          <label class="toggle">
+            <span>Tryb debug</span>
+            <input type="checkbox" name="debug" />
+          </label>
+        </section>
+        <section>
+          <h2>Wygląd</h2>
+          <label>
+            Kolor akcentu
+            <input type="color" name="accent" value="#7F00FF" />
+          </label>
+        </section>
+        <footer>
+          <button type="submit" class="primary">Zapisz</button>
+          <span class="status" role="status"></span>
+        </footer>
+      </form>
+      <aside class="settings-info">
+        <h2>Porady</h2>
+        <ul>
+          <li>Skrót <strong>Ctrl+I</strong> aktywuje wybór tekstu (na macOS może kolidować z kursywą).</li>
+          <li>Obraz dodasz po wyborze <strong>T</strong> w popupie lub klawiszem <strong>T</strong>.</li>
+          <li>Debug pokazuje surową odpowiedź API w panelu oraz w popupie.</li>
+        </ul>
+      </aside>
+    </main>
+    <script type="module" src="settings.js"></script>
+  </body>
+</html>
