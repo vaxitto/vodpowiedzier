@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Task Solver Fluent Assistant",
+  "description": "Rozwiązuje zadania ze schowka z pomocą ChatGPT i prezentuje odpowiedź w panelu Fluent.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Solver"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "clipboardRead"
+  ],
+  "optional_permissions": [
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "commands": {
+    "activate_solver": {
+      "suggested_key": {
+        "default": "Ctrl+I"
+      },
+      "description": "Rozwiąż tekst ze schowka"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.svg",
+    "32": "icons/icon-32.svg",
+    "48": "icons/icon-48.svg",
+    "128": "icons/icon-128.svg"
+  },
+  "options_page": "settings.html",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles/fluent.css",
+        "fonts/inter.css",
+        "settings.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

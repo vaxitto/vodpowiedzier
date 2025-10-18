@@ -1,0 +1,151 @@
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 32px;
+  background: radial-gradient(circle at top, rgba(127, 0, 255, 0.25), rgba(10, 10, 18, 0.95));
+  color: #f5f5ff;
+}
+
+.settings-root {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(18, 18, 28, 0.9);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 32px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.6px;
+}
+
+header p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form section {
+  background: rgba(30, 30, 42, 0.75);
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form section h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+input[type='password'],
+select,
+input[type='color'] {
+  background: rgba(10, 10, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  color: #f5f5ff;
+  padding: 10px 14px;
+  font-size: 15px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input[type='password']:focus,
+select:focus,
+input[type='color']:focus {
+  outline: none;
+  border-color: #7F00FF;
+  box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.35);
+}
+
+input[type='color'] {
+  height: 40px;
+  padding: 0;
+}
+
+.toggle {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle input {
+  width: 48px;
+  height: 24px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+button.primary {
+  background: linear-gradient(135deg, #7F00FF, #00C2FF);
+  border: none;
+  border-radius: 16px;
+  padding: 12px 24px;
+  color: #0b0415;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+button.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.status {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.settings-info {
+  background: rgba(30, 30, 42, 0.75);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.settings-info h2 {
+  margin-top: 0;
+}
+
+.settings-info ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .settings-root {
+    grid-template-columns: 1fr;
+  }
+}

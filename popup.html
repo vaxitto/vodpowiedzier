@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Solver</title>
+    <link rel="stylesheet" href="styles/fluent.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="fonts/inter.css" />
+  </head>
+  <body>
+    <main class="popup-root">
+      <header class="popup-header">
+        <h1>Task Solver</h1>
+        <div class="popup-counter" data-count="0">Odpowiedzi: 0</div>
+      </header>
+      <section class="popup-content">
+        <article class="popup-response" data-placeholder="Brak odpowiedzi."></article>
+        <div class="popup-usage" hidden></div>
+        <div class="popup-debug" hidden>
+          <h2>Debug</h2>
+          <pre></pre>
+        </div>
+      </section>
+      <footer class="popup-footer">
+        <button id="copy-response">Kopiuj</button>
+        <button id="open-settings">Otwórz ustawienia</button>
+      </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
