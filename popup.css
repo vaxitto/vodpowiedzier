@@ -1,0 +1,115 @@
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  --accent: #7F00FF;
+}
+
+body {
+  margin: 0;
+  background: rgba(18, 18, 28, 0.98);
+  color: #f5f5f5;
+  min-width: 360px;
+}
+
+.popup-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+}
+
+.popup-counter {
+  background: color-mix(in srgb, var(--accent, #7F00FF) 35%, transparent);
+  color: #f0e8ff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.popup-content {
+  background: rgba(30, 30, 40, 0.8);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.popup-response {
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.popup-response:empty::before {
+  content: attr(data-placeholder);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.popup-usage {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.popup-debug {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.popup-debug h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.popup-debug pre {
+  margin: 0;
+  font-size: 12px;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.popup-footer button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+#copy-response {
+  background: var(--accent, #7F00FF);
+  color: #0b0415;
+  font-weight: 600;
+}
+
+#open-settings {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f5f5f5;
+}
+
+.popup-footer button:hover {
+  transform: translateY(-1px);
+}
